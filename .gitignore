@@ -1,0 +1,127 @@
+# Python general
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.env
+
+# Django stuff:
+*.log
+*.pot
+*.py[cod]
+*.sqlite3
+*.db
+*.local_settings.py
+.DS_Store
+/media
+/staticfiles
+/static
+
+# If you're using Django compressor
+/compressed
+
+# Environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# MacOS files
+.DS_Store
+
+# Node modules (if using Node.js for front-end dependencies)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# Coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+pytestdebug.log
+
+# Environments
+.env
+.envrc
+.venv
+ENV/
+env/
+venv/
+venv.bak/
+
+# Static files
+/static/
+# Example: staticfile_storage location
+/staticfiles/
+staticfiles.json
+
+# Media files
+/media/
+
+# Secrets
+secrets.json
+
+# Pycharm specific files
+.idea/
+*.iml
+
+# VirtualBox
+*.vbox
+*.vbox-prev
+
+# Vagrant
+.vagrant/
+
+# Log files
+*.log
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# pipenv
+Pipfile.lock
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# VS Code
+.vscode/
+
+# JetBrains Rider
+.idea/
