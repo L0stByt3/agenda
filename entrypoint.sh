@@ -16,4 +16,4 @@ fi
 
 # Iniciar Gunicorn
 echo "Iniciando Gunicorn..."
-gunicorn --bind 127.0.0.1:8000 gruposalinas.wsgi:application
+gunicorn --bind 0.0.0.0:8000 gruposalinas.wsgi:application

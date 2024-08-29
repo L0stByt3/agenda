@@ -98,7 +98,7 @@ DATABASES = {
     'NAME': config('DB_NAME'),
     'USER': config('DB_USER'),
     'PASSWORD': config('DB_PASSWORD'),
-    'HOST': 'db',
+    'HOST': '127.0.0.1',
     'PORT':config('DB_PORT'),
      'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES', innodb_strict_mode=1",
@@ -148,4 +148,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]','0.0.0.0']
