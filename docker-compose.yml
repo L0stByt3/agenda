@@ -15,10 +15,10 @@ services:
 
   web:
     build:
-      context: ./gsalinas
+      context: ./
     command: gunicorn --bind 0.0.0.0:8000 gruposalinas.wsgi:application
     volumes:
-      - ./app:/app  # Mapea el código de la aplicación al contenedor
+      - .:/app
     ports:
       - "8000:8000"
     depends_on:
@@ -31,6 +31,7 @@ services:
       - DB_PASSWORD=adm1n1str4t0r
       - DB_HOST=db
       - DB_PORT=3306
+      - DJANGO_SETTINGS_MODULE=gruposalinas.settings
 
 volumes:
   db_data:

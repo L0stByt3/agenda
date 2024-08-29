@@ -1,22 +1,25 @@
 
-FROM python:3.10-slim
+FROM python:3.10
 
-WORKDIR /gsalinas
+WORKDIR /app
 
 RUN apt-get update && apt-get install -y \
     libmariadb-dev gcc \
     && rm -rf /var/lib/apt/lists/*
 
-COPY requirements.txt .
+COPY requirements.txt /app/
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY . /app/
+
+RUN chmod +x /app/entrypoint.sh
 
 ENV DJANGO_SETTINGS_MODULE=gruposalinas.settings
 ENV DJANGO_CONFIGURATION=BaseConfig
 ENV PYTHONUNBUFFERED=1
 
-EXPOSE 6666
+EXPOSE 8000
 
-CMD ["gunicorn", "--bind", "0.0.0.0:6666", "gruposalinas.wsgi:application"]
+ENTRYPOINT ["/app/entrypoint.sh"]
+
